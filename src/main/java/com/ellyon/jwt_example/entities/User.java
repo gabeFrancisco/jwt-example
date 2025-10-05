@@ -36,4 +36,51 @@ public class User {
 
     private Set<Role> roles;
 
+
+    public UUID getUserId() {
+        return this.userId;
+    }
+
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
+
+    public String getUsername() {
+        return this.username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<Role> getRoles() {
+        return this.roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    public enum Values{
+        ADMIN(1L),
+        BASIC(2L);
+
+        long roleId;
+
+        Values(long roleId){
+            this.roleId = roleId;
+        }
+
+        public long getRoledId(){
+            return roleId;
+        }
+    }
 }

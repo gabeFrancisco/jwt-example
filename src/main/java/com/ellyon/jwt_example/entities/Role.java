@@ -16,4 +16,21 @@ public class Role {
     @Column(name = "role_id")
     private Long roleId;
     private String name;
+
+    public Long getRoleId() {
+        return this.roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
