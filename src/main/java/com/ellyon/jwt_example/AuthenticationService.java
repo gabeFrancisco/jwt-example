@@ -1,4 +1,4 @@
-package com.ellyon.jwt_example.controllers;
+package com.ellyon.jwt_example;
 
 import org.springframework.stereotype.Service;
 
