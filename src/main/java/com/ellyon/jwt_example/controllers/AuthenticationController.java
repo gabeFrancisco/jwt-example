@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ellyon.jwt_example.AuthenticationService;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
@@ -15,8 +16,8 @@ public class AuthenticationController {
     }
 
     @PostMapping("authenticate")
-    public String authenticate() {
-        return authenticationService.authenticate();
+    public String authenticate(Authentication authentication) {
+        return authenticationService.authenticate(authentication);
     }
     
 }
