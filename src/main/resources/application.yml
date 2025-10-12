@@ -22,3 +22,9 @@ spring:
   #       "[show_sql]": true
   #       "[format_sql]": false
   #   defer-datasource-initialization: true
+
+jwt:
+  private:
+    key: classpath:app.key
+  public:
+    key: classpath:app.pub
