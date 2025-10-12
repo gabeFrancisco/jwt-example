@@ -1,4 +1,0 @@
-create table if not exists USERS(
-    username varchar(100) not null primary key,
-    password varchar(100) not null
-);
