@@ -3,7 +3,7 @@ spring:
     name: jwt-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/parking_api
+    url: jdbc:postgresql://localhost:5432/jwt_auth
     username: postgres
     password: 1234
     # driver-class-name: org.postgresql.Driver
