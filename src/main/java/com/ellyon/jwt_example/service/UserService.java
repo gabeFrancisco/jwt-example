@@ -9,16 +9,13 @@ import org.springframework.stereotype.Service;
 
 import com.ellyon.jwt_example.model.User;
 import com.ellyon.jwt_example.repository.UserRepository;
-import com.ellyon.jwt_example.security.JwtUtil;
 
 @Service
 public class UserService {
     private final UserRepository userRepository;
-    private final JwtUtil jwtUtil;
 
-    public UserService(UserRepository userRepository, JwtUtil jwtUtil) {
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
-        this.jwtUtil = jwtUtil;
     }
 
     private String hashPassword(String password){
@@ -35,7 +32,7 @@ public class UserService {
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found!"));
 
         if(user.getPassword().equals(hashPassword(password))){
-            return jwtUtil.generateToken(email);
+            return "";
         }
 
         throw new RuntimeException("Invalid credentials!");
